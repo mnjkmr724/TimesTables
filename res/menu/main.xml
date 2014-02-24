@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/next_question"
+        android:orderInCategory="100"
+        myapp:showAsAction="always|withText"
+        android:visible="true"
+        android:title="@string/next_question"
+        />
+
+</menu>

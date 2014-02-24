@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <item
+        type="id"
+        name="is_correct_answer" />
+        <item
+        type="id"
+        name="option_value" />
+         <item
+        type="id"
+        name="play_again" />
+          <item
+        type="id"
+        name="quiz_menu" />
+           <item
+        type="id"
+        name="revise_menu" />
+            <item
+        type="id"
+        name="learn_menu" />
+             <item
+        type="id"
+        name="revise_again" />
+              <item
+        type="id"
+        name="learn_again" />
+               <item
+        type="id"
+        name="incorrect_number" />
+               
+               
+</resources>

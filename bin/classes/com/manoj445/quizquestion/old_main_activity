@@ -1,0 +1,60 @@
+package com.manoj445.quizquestion;
+
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+
+public class MainActivity extends ActionBarActivity{
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+	
+		
+		ActionBar actionBar=getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public Intent getSupportParentActivityIntent() {
+		
+		DialogInterface.OnClickListener listener=new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				switch (which) {
+				case DialogInterface.BUTTON_POSITIVE:
+					
+					break;
+
+				case  DialogInterface.BUTTON_NEGATIVE:
+
+					break;
+				}
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		
+		AlertDialog.Builder dBuilder=new AlertDialog.Builder(this);
+		dBuilder.setMessage("Are you sure you want to exit this quiz?").setPositiveButton("Yes", listener).setNegativeButton("No", listener);
+		AlertDialog dialog=dBuilder.create();
+		dialog.show();
+		// TODO Auto-generated method stub
+		return super.getSupportParentActivityIntent();
+	}
+	
+}

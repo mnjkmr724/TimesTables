@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources 
+    >
+    <color name="lightsgreen">#A9F5BC</color>
+    <color name="lightred">#FE2E2E</color>
+    <color name="correct_answer_color">#B20030</color>
+    <color name="wrong_answer_color">#004B33</color>
+    <color name="text_red">#CC0000</color>
+    <color name="text_green">#669900</color>
+    
+</resources>

@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_mother_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".QuizQuestionFragment" >
+
+    <!-- The below linear layout called "question_and_status_area_container" is one to the top 2 linear layouts in this fragment, having a weight of 1. the other one is "answer_area_container" with a weight of 1. -->
+
+
+    <!--
+    "question_and_status_area_container" is for the question area and status. 
+    It has 2 chlidren a linear layout "status_bar_container_outercontainer" having weight 1 
+    and a textview "quiz_question" with weight 1.
+    -->
+
+    <LinearLayout
+        android:id="@+id/question_and_status_area_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical" >
+
+        <!--
+         Below container "status_bar_container" is meant for indicating the current question number,
+ 		the score and whether the current answer was correct.
+ 		
+ 		This has 2 LinearLayout children - one "status_bar_container" and the other 
+ 		"star_indicator_container" with weights 3 and 1 respectiverly
+        -->
+
+        <LinearLayout
+            android:id="@+id/status_bar_container_outercontainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!--
+ 		 "status_bar_container" has 3 children "question_number_container" (LinearLayout, weight 1),
+ 		"answer_status" (TextView, weight 2) and "current_score_container" (LinearLayout, weight 1)
+            -->
+
+            <LinearLayout
+                android:id="@+id/status_bar_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <!-- This linear layout below is the question number -->
+
+                <LinearLayout
+                    android:id="@+id/question_number_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/question_indicator"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/question_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/circle_shape"
+                        android:gravity="center"
+                        android:text="@string/question_number"
+                        android:textColor="@android:color/secondary_text_light" />
+                </LinearLayout>
+                <!-- End of linear layout for question indicator -->
+                <!-- This is where the answer status indicator is noted -->
+
+                <TextView
+                    android:id="@+id/answer_status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal|bottom" />
+                <!-- This linear layout is the section of current score -->
+
+                <LinearLayout
+                    android:id="@+id/current_score_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/score_indicator"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/current_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/circle_shape"
+                        android:gravity="center"
+                        android:text="@string/current_score" />
+                </LinearLayout>
+                <!-- End of linear layour for current score -->
+
+            </LinearLayout>
+            <!-- End of Status bar container -->
+
+        </LinearLayout>
+
+        <!-- End of status bar outer container -->
+        <!--
+            This is the linearlayout to house the 3 stars that will be awarded om reaching
+            certain milestones in the quiz.
+        -->
+
+
+        <!-- Below is the main question -->
+
+        <TextView
+            android:id="@+id/quiz_question"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/quiz_question"
+            android:textSize="36sp" />
+
+        <!-- End of the main question -->
+
+    </LinearLayout>
+
+    <!-- Below is the answers area -->
+
+    <LinearLayout
+        android:id="@+id/answer_area_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/answer_one_and_two_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/answer1"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:onClick="checkAnswer"
+                android:text="@string/answer1" />
+
+            <Button
+                android:id="@+id/answer2"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:onClick="checkAnswer"
+                android:text="@string/answer2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answer_three_and_four_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/answer3"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:onClick="checkAnswer"
+                android:text="@string/answer3" />
+
+            <Button
+                android:id="@+id/answer4"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:onClick="checkAnswer"
+                android:text="@string/answer4" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_question_button"
+        style="@style/ButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="4"
+        android:background="@drawable/btn_yellow"
+        android:text="@string/next_question_button" />
+
+</LinearLayout>

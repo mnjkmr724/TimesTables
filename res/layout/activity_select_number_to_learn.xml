@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+     android:paddingBottom="?attr/actionBarSize"
+    android:paddingTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/learn_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="left|bottom"
+        android:text="@string/actually_learn_welcome_message"
+        style="@style/AppTheme.InstructionText" />
+
+    <LinearLayout
+        android:id="@+id/learn_options_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/number_1"
+                style="@style/ButtonText"
+                android:background="@drawable/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="userChoice"
+                android:text="@string/number_1" />
+
+            <Button
+                android:id="@+id/number_2"
+                style="@style/ButtonText"
+                android:background="@drawable/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="userChoice"
+                android:text="@string/number_2" />
+
+            <Button
+                android:id="@+id/number_3"
+                style="@style/ButtonText"
+                android:background="@drawable/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="userChoice"
+                android:text="@string/number_3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/number_4"
+                style="@style/ButtonText"
+                android:background="@drawable/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="userChoice"
+                android:text="@string/number_4" />
+
+            <Button
+                android:id="@+id/number_5"
+                style="@style/ButtonText"
+                android:background="@drawable/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="userChoice"
+                android:text="@string/number_5" />
+
+            <Button
+                android:id="@+id/number_6"
+                style="@style/ButtonText"
+                android:background="@drawable/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="userChoice"
+                android:text="@string/number_6" />
+
+            </LinearLayout >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/number_7"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_blue"
+                	android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="userChoice"
+                    android:text="@string/number_7" />
+
+                <Button
+                    android:id="@+id/number_8"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_blue"
+                	android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="userChoice"
+                    android:text="@string/number_8" />
+
+                <Button
+                    android:id="@+id/number_9"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_blue"
+                	android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="userChoice"
+                    android:text="@string/number_9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/number_10"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_blue"
+                	android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="userChoice"
+                    android:text="@string/number_10" />
+
+                <Button
+                    android:id="@+id/number_11"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_blue"
+                	android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="userChoice"
+                    android:text="@string/number_11" />
+
+                <Button
+                    android:id="@+id/number_12"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_blue"
+                	android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:onClick="userChoice"
+                    android:text="@string/number_12" />
+            </LinearLayout>
+        </LinearLayout>
+          
+    </LinearLayout>

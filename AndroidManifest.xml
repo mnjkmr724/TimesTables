@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.manoj445.quizquestion"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/multiple1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.LargeFont" >
+        
+        <!--  MainActivity is the starting point of the revision screen-->
+        <activity
+            android:name="com.manoj445.quizquestion.MainActivity"
+            android:label="@string/title_activity_revise_tables"
+            android:parentActivityName="com.manoj445.quizquestion.MainMenuActivity"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manoj445.quizquestion.MainMenuActivity" />
+        </activity>
+        
+        <!--  This is the launcher activity -->
+        <activity
+            android:name="com.manoj445.quizquestion.MainMenuActivity"
+            android:label="@string/title_activity_main_menu" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--  This activity shows quiz questions for both random and revision quizzes -->
+        <activity
+            android:name="com.manoj445.quizquestion.QuizActivity"
+            android:label="@string/title_activity_quiz"
+            android:noHistory="true"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+ 
+        <!-- This is the starting point of random quiz activity -->
+        <activity
+            android:name="com.manoj445.quizquestion.QuizSelectNumbersActivity"
+            android:label="@string/title_activity_quiz_select_numbers"
+            android:parentActivityName="com.manoj445.quizquestion.MainMenuActivity"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manoj445.quizquestion.MainMenuActivity" />
+        </activity>
+        
+        <!-- This is the starting point of the learn activity -->
+        <activity
+            android:name="com.manoj445.quizquestion.SelectNumberToLearn"
+            android:label="@string/title_activity_select_number_to_learn"
+            android:parentActivityName="com.manoj445.quizquestion.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manoj445.quizquestion.MainMenuActivity" />
+        </activity>
+        
+        <!-- This activity shows the times table of a particular number -->
+        <activity
+            android:name="com.manoj445.quizquestion.TimesTableOfANumber"
+            android:label="@string/title_activity_times_table_of_anumber" 
+             android:uiOptions="splitActionBarWhenNarrow"
+             android:parentActivityName="com.manoj445.quizquestion.SelectNumberToLearn" >
+            
+             <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+              <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manoj445.quizquestion.SelectNumberToLearn" />
+        </activity>
+        
+        <!-- This activity shows the result of the quiz -->
+        
+        <activity
+            android:name="com.manoj445.quizquestion.QuizResultActivity"
+            android:label="@string/title_activity_quiz_result"
+            android:noHistory="true"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manoj445.quizquestion.MainMenuActivity" />
+        </activity>
+    </application>
+
+</manifest>
